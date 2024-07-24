@@ -8,7 +8,7 @@ const Payment = sequelize.define('Payment', {
     },
     id: {
         type: DataTypes.STRING,
-        primaryKey: true
+        allowNull: false
     },
     dateCreated: {
         type: DataTypes.DATE,
