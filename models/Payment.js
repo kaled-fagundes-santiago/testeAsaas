@@ -1,10 +1,11 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/mysql');
+const { v4: uuidv4 } = require('uuid');  // Importa a biblioteca uuid
 
 const Payment = sequelize.define('Payment', {
     uuid: {
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4, // Gera um UUID automaticamente
+        defaultValue: uuidv4, // Gera um UUID automaticamente
         primaryKey: true
     },
     object: {
