@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/mysql');
-const Payment = require('./payment');  // Ajuste o caminho conforme necessário
+const Payment = require('./Payment');  // Ajuste o caminho conforme necessário
 
 const WebhookEventPayment = sequelize.define('WebhookEventPayment', {
     id: {
