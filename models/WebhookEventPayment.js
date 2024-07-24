@@ -17,7 +17,7 @@ const WebhookEventPayment = sequelize.define('WebhookEventPayment', {
     },
     paymentId: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         references: {
             model: Payment,
             key: 'id'
