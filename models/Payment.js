@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../database/mysql');
 
 const Payment = sequelize.define('Payment', {
+    uuid: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4, // Gera um UUID automaticamente
+        primaryKey: true
+    },
     object: {
         type: DataTypes.STRING,
         allowNull: false
