@@ -10,14 +10,14 @@ class MessageController {
     async sendMessage(req, res) {
         const body = req.body;
         const paymentRec = body.payment;
-        const paymentCreated = payment.create(paymentRec);
+        const paymentCreated = await payment.create(paymentRec);
         const webhookEvent = {
             id: body.id,
             event: body.event,
             dateCreated: new Date(),
             paymentId: paymentCreated.id
         };
-        webhook.create(webhookEvent);
+        await webhook.create(webhookEvent);
         
         // Retorne uma resposta para dizer que o webhook foi recebido
         res.json({received: true});
