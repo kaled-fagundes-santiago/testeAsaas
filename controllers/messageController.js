@@ -10,7 +10,7 @@ class MessageController {
     async sendMessage(req, res) {
         const body = req.body;
         const paymentRec = body.payment;
-        payment.create(paymentRec);
+        paymentRec = payment.create(paymentRec);
         const webhookEvent = {
             id: body.id,
             event: body.event,
