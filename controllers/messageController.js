@@ -10,6 +10,9 @@ class MessageController {
     async sendMessage(req, res) {
         const body = req.body;
         const paymentRec = body.payment;
+        if(paymentRec.object == null) {
+            return res.status(400).json({error: 'Invalid object type'});
+        }
         const paymentCreated = await payment.create(paymentRec);
         const webhookEvent = {
             id: body.id,

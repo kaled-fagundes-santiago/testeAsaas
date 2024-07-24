@@ -10,23 +10,23 @@ const Payment = sequelize.define('Payment', {
     },
     object: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     id: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     dateCreated: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     customer: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     paymentLink: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     dueDate: {
         type: DataTypes.STRING,
