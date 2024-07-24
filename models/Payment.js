@@ -30,30 +30,30 @@ const Payment = sequelize.define('Payment', {
     },
     dueDate: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: true
     },
     originalDueDate: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: true
     },
     value: {
         type: DataTypes.FLOAT,
-        allowNull: false
+        allowNull: true
     },
     netValue: {
         type: DataTypes.FLOAT,
-        allowNull: false
+        allowNull: true
     },
     originalValue: {
         type: DataTypes.FLOAT
     },
     description: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     externalReference: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     billingType: {
         type: DataTypes.STRING,
@@ -89,7 +89,7 @@ const Payment = sequelize.define('Payment', {
     },
     invoiceUrl: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     bankSlipUrl: {
         type: DataTypes.STRING
@@ -99,7 +99,7 @@ const Payment = sequelize.define('Payment', {
     },
     invoiceNumber: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     deleted: {
         type: DataTypes.BOOLEAN,
