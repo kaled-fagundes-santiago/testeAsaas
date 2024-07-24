@@ -17,7 +17,7 @@ const Payment = sequelize.define('Payment', {
         allowNull: false
     },
     dateCreated: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     customer: {
@@ -29,11 +29,11 @@ const Payment = sequelize.define('Payment', {
         allowNull: false
     },
     dueDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true
     },
     originalDueDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: true
     },
     value: {
@@ -67,25 +67,25 @@ const Payment = sequelize.define('Payment', {
         type: DataTypes.STRING
     },
     confirmedDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     paymentDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     clientPaymentDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     installmentNumber: {
         type: DataTypes.STRING
     },
     creditDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     custody: {
         type: DataTypes.STRING
     },
     estimatedCreditDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     invoiceUrl: {
         type: DataTypes.STRING,
@@ -114,10 +114,10 @@ const Payment = sequelize.define('Payment', {
         defaultValue: false
     },
     lastInvoiceViewedDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     lastBankSlipViewedDate: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING,
     },
     postalService: {
         type: DataTypes.BOOLEAN,
